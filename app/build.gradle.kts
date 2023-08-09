@@ -7,6 +7,10 @@ android {
     namespace = "com.rajkishorbgp.unitconverter"
     compileSdk = 33
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.rajkishorbgp.unitconverter"
         minSdk = 24
