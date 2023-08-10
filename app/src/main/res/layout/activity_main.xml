@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> 8c465ec (update fetchers)
-=======
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> origin/main
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     android:background="@color/black"
     android:orientation="vertical"
->>>>>>> 8c465ec (update fetchers)
-=======
-    android:background="@color/black"
-    android:orientation="vertical"
->>>>>>> origin/main
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
-=======
->>>>>>> origin/main
         android:text="@string/unit_converter"
         android:layout_gravity="center"
         android:textSize="30sp"
@@ -247,9 +219,4 @@
                 />
         </androidx.cardview.widget.CardView>
     </GridLayout>
-<<<<<<< HEAD
 </LinearLayout>
->>>>>>> 8c465ec (update fetchers)
-=======
-</LinearLayout>
->>>>>>> origin/main
