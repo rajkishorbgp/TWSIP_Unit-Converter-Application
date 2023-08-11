@@ -17,6 +17,8 @@ class FrequencyActivity : AppCompatActivity() {
         binding = ActivityFrequencyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title = "Convert Length"
+
         val areaUnits = arrayOf(
             "Cubic Meter", "Cubic Kilometer", "Cubic Centimeter", "Cubic Millimeter",
             "Liter", "Milliliter", "US Gallon", "Us Quart","US Pint", "US Cup", "US Fluid Ounce"

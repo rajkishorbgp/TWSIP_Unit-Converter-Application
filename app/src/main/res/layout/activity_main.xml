@@ -4,20 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brickRedColor"
+    android:background="@color/eggplantColor"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/unit_converter"
-        android:layout_gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginTop="30dp"
-        />
+        android:background="@color/infoBlueColor"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"/>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -26,7 +23,7 @@
         android:rowCount="1"
         android:layout_weight="8"
         android:padding="5dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/area_cardView"
@@ -38,7 +35,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             app:cardMaxElevation="10dp"
-            android:background="@color/black"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardCornerRadius="15dp">
 
             <ImageView
@@ -52,10 +49,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/area"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
 
         </androidx.cardview.widget.CardView>
@@ -69,6 +66,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardMaxElevation="10dp"
             app:cardCornerRadius="15dp">
 
@@ -83,10 +81,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/speed"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
 
 
@@ -101,6 +99,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardMaxElevation="10dp"
             app:cardCornerRadius="15dp">
 
@@ -115,10 +114,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/length"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
 
 
@@ -133,6 +132,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardMaxElevation="10dp"
             app:cardCornerRadius="15dp">
 
@@ -147,10 +147,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/temperature"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
 
 
@@ -165,6 +165,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardMaxElevation="10dp"
             app:cardCornerRadius="15dp">
 
@@ -179,10 +180,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frequency"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="32sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
 
 
@@ -197,6 +198,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="@color/salmonColor"
             app:cardMaxElevation="10dp"
             app:cardCornerRadius="15dp">
 
@@ -212,10 +214,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mass"
                 android:textStyle="bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="32sp"
                 android:layout_gravity="bottom|center"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="25dp"
                 />
         </androidx.cardview.widget.CardView>
     </GridLayout>

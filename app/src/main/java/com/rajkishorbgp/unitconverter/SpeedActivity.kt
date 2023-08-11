@@ -17,6 +17,9 @@ class SpeedActivity : AppCompatActivity() {
         binding = ActivitySpeedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title = "Convert Length"
+
+
         val areaUnits = arrayOf(
             "Meter", "Kilometer", "Centimeter", "Micrometer",
             "Nanometer", "Mile", "yard", "foot","inch"

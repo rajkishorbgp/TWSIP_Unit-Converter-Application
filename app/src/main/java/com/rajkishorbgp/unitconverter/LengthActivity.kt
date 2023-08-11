@@ -4,18 +4,26 @@ package com.rajkishorbgp.unitconverter
 import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.activity.setViewTreeOnBackPressedDispatcherOwner
 import com.rajkishorbgp.unitconverter.databinding.ActivityLengthBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class LengthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLengthBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLengthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.toolbar.title = "Length Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val areaUnits = arrayOf(
             "Meter", "Kilometer", "Centimeter", "Micrometer",
@@ -126,4 +134,11 @@ class LengthActivity : AppCompatActivity() {
     private fun String.showToast() {
         Toast.makeText(this@LengthActivity, this, Toast.LENGTH_SHORT).show()
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
+    }
+
 }
+

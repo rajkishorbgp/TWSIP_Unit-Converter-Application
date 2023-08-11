@@ -16,6 +16,8 @@ class MassActivity : AppCompatActivity() {
         binding = ActivityMassBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title = "Convert Length"
+
         val areaUnits = arrayOf(
             "Kilogram", "Gram", "Metric Ton", "Long Ton",
             "Short Ton", "Pound", "Ounce", "Carrat","Atomic Mass Unit"

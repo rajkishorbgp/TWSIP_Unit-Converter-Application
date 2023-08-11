@@ -2,12 +2,14 @@ package com.rajkishorbgp.unitconverter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.rajkishorbgp.unitconverter.databinding.ActivityAreaBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class AreaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAreaBinding
 
@@ -16,6 +18,10 @@ class AreaActivity : AppCompatActivity() {
         binding = ActivityAreaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title = "Area Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val areaUnits = arrayOf(
             "Square Meter", "Square Kilometer", "Square Centimeter","Square Millimeter", "Square Micrometer",
             "Hectare", "Square Mile", "Square Yard", "Square Foot","Square Inch"
@@ -23,7 +29,6 @@ class AreaActivity : AppCompatActivity() {
         val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, areaUnits)
         binding.spinnerFrom.adapter = arrayAdapter
         binding.spinnerTo.adapter = arrayAdapter
-
         binding.convertButton.setOnClickListener { convertArea() }
     }
 
@@ -124,5 +129,10 @@ class AreaActivity : AppCompatActivity() {
 
     private fun String.showToast() {
         Toast.makeText(this@AreaActivity, this, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }

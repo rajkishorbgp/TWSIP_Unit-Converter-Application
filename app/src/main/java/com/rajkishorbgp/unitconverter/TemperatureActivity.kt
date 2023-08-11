@@ -17,6 +17,9 @@ class TemperatureActivity : AppCompatActivity() {
         binding = ActivityTemperatureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title = "Convert Length"
+
+
         val areaUnits = arrayOf(
             "Celsius", "Kelvin", "Fahrenheit"
         )

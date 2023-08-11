@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.toolbar.title ="Unit Converter"
+        binding.toolbar.subtitle = "Home"
+
+
        binding.areaCardView.setOnClickListener{
            val intent = Intent(this,AreaActivity::class.java)
            startActivity(intent)
