@@ -1,6 +1,6 @@
 # Unit Converter Application
 
-![Unit Converter App](app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png)
+<img align="right" alt="Coding" width="100" src="app/src/main/res/drawable/app_icon.png">
 
 Welcome to the Unit Converter Application repository! This Android app allows you to perform accurate and customizable unit conversions effortlessly.
 
@@ -14,8 +14,14 @@ Welcome to the Unit Converter Application repository! This Android app allows yo
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/1.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/2.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/3.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/4.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/5.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/6.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/7.png">
+<img align="right" alt="Coding" width="100" src="AndroidProjects/UnitConverter/8.png">
 
 ## Installation
 
