@@ -60,6 +60,45 @@ The Unit Converter Android Application is a versatile tool that allows users to 
 
 Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
+## File Structure
+
+The project file structure is organized as follows:
+
+```
+├── app
+│   ├── src
+│   │   ├── main
+│   │   │   ├── java/com/rajkishorbgp/signupsignin
+│   │   │   │   ├── AreaActivity.kt
+│   │   │   │   ├── FrequencyActivity.kt
+│   │   │   │   ├── LanguageManager.kt
+│   │   │   │   └── LengthActivity.kt
+│   │   │   │   └── MainActivity.kt
+│   │   │   │   └── MassActivity.kt
+│   │   │   │   └── SettingActivity.kt
+│   │   │   │   └── SpeedActivity.kt
+│   │   │   │   └── TemperatureActivity.kt
+│   │   │   │   └── WelcomeActivity.kt
+│   │   │   └── res
+│   │   │       ├── layout
+│   │   │       │   ├── activity_area.xml
+│   │   │       │   ├── activity_frequency.xml
+│   │   │       │   ├── activity_length.xml
+│   │   │       │   └── activity_main.xml
+│   │   │       │   └── activity_mass.xml
+│   │   │       │   └── activity_setting.xml
+│   │   │       │   └── activity_speed.xml
+│   │   │       │   └── activity_temperature.xml
+│   │   │       │   └── activity_welcome.xml
+│   │   │       ├── values
+│   │   │       │   ├── strings.xml
+│   │   │       │   └── colors.xml
+│   │   │       └── ...
+│   │   └── ...
+│   └── ...
+└── ...
+```
+
 ## Contact
 
 For any inquiries or feedback, please contact us at: rajkishorbgp6@gmail.com
@@ -67,6 +106,30 @@ For any inquiries or feedback, please contact us at: rajkishorbgp6@gmail.com
 ## License
 
 This project is licensed under the [MIT License](https://github.com/rajkishorbgp/Unit-Converter-Application/blob/main/LICENSE.txt).
+
+```
+MIT License
+
+Copyright (c) 2023 rajkishorbgp
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ---
 
