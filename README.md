@@ -14,14 +14,18 @@ Welcome to the Unit Converter Application repository! This Android app allows yo
 
 ## Screenshots
 
-<img align="left" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/1.png">
-<img align="" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/2.png">
-<img align="" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/3.png">
-<img align="" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/4.png">
-<img align="left" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/5.png">
-<img align="" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/6.png">
-<img align="" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/7.png">
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/8.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/1.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/2.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/3.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/4.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/5.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/6.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/7.png">
+<img align="right" alt="Coding" width="100" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/8.png">
+
+###### Swipe through the screenshots below to catch a glimpse of the app's user-friendly interface:
+
+---
 
 ## Installation
 
