@@ -3,12 +3,14 @@ package com.rajkishorbgp.unitconverter
 import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.rajkishorbgp.unitconverter.databinding.ActivityMassBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class MassActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMassBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +18,9 @@ class MassActivity : AppCompatActivity() {
         binding = ActivityMassBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.title = "Convert Length"
+        binding.toolbar.title = "Mass Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val areaUnits = arrayOf(
             "Kilogram", "Gram", "Metric Ton", "Long Ton",
@@ -126,5 +130,10 @@ class MassActivity : AppCompatActivity() {
 
     private fun String.showToast() {
         Toast.makeText(this@MassActivity, this, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }

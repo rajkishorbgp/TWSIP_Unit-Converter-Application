@@ -4,12 +4,14 @@ package com.rajkishorbgp.unitconverter
 import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.rajkishorbgp.unitconverter.databinding.ActivityTemperatureBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class TemperatureActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTemperatureBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,8 +19,9 @@ class TemperatureActivity : AppCompatActivity() {
         binding = ActivityTemperatureBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.title = "Convert Length"
-
+        binding.toolbar.title = "Temperature Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val areaUnits = arrayOf(
             "Celsius", "Kelvin", "Fahrenheit"
@@ -91,5 +94,10 @@ class TemperatureActivity : AppCompatActivity() {
 
     private fun String.showToast() {
         Toast.makeText(this@TemperatureActivity, this, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }

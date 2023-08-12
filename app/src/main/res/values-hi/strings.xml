@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="speed">रफ़्तार</string>
+    <string name="area">क्षेत्र</string>
+    <string name="length">लंबाई</string>
+    <string name="temperature">तापमान</string>
+    <string name="frequency">आवृत्ति</string>
+    <string name="mass">द्रव्यमान</string>
+    <string name="unit_converter">इकाई कनवर्टर</string>
+    <string name="enter_units_to_convert">परिवर्तित करने के लिए इकाइयाँ दर्ज करें</string>
+    <string name="from">से</string>
+    <string name="convert_from">से कनवर्ट करें</string>
+    <string name="convert_to">में बदलो</string>
+    <string name="convergion_racio">रूपांतरण अनुपात</string>
+    <string name="convert">बदलना</string>
+    <string name="settings">सेटिंग</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="change_theme">विषय को परिवर्तित करें</string>
+</resources>

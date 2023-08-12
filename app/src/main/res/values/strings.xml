@@ -13,4 +13,7 @@
     <string name="convert_to">Convert To</string>
     <string name="convergion_racio">Convergion Racio</string>
     <string name="convert">CONVERT</string>
+    <string name="settings">Setting</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_theme">Change Theme</string>
 </resources>

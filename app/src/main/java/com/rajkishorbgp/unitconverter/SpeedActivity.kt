@@ -4,12 +4,14 @@ package com.rajkishorbgp.unitconverter
 import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.rajkishorbgp.unitconverter.databinding.ActivitySpeedBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class SpeedActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySpeedBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,8 +19,9 @@ class SpeedActivity : AppCompatActivity() {
         binding = ActivitySpeedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.title = "Convert Length"
-
+        binding.toolbar.title = "Speed Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val areaUnits = arrayOf(
             "Meter", "Kilometer", "Centimeter", "Micrometer",
@@ -128,5 +131,10 @@ class SpeedActivity : AppCompatActivity() {
 
     private fun String.showToast() {
         Toast.makeText(this@SpeedActivity, this, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }

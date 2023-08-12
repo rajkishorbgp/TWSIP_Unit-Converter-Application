@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="speed">رفتار</string>
+    <string name="area">رقبہ</string>
+    <string name="length">لمبائی</string>
+    <string name="temperature">درجہ حرارت</string>
+    <string name="frequency">تعدد</string>
+    <string name="mass">بڑے پیمانے پر</string>
+    <string name="unit_converter">یونٹ کنورٹر</string>
+    <string name="enter_units_to_convert">تبدیل کرنے کے لیے یونٹس درج کریں۔</string>
+    <string name="from">سے</string>
+    <string name="convert_from">سے تبدیل کریں۔</string>
+    <string name="convert_to">میں تبدیل کریں۔</string>
+    <string name="convergion_racio">تبادلوں کا تناسب</string>
+    <string name="convert">کنورٹ</string>
+    <string name="settings">ترتیب</string>
+    <string name="change_language">زبان تبدیل کریں</string>
+    <string name="change_theme">تھیم تبدیل کریں</string>
+</resources>

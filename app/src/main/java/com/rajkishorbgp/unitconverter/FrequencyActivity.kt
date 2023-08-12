@@ -4,12 +4,14 @@ package com.rajkishorbgp.unitconverter
 import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.rajkishorbgp.unitconverter.databinding.ActivityFrequencyBinding
 import java.text.DecimalFormat
 
+@Suppress("DEPRECATION")
 class FrequencyActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFrequencyBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,9 @@ class FrequencyActivity : AppCompatActivity() {
         binding = ActivityFrequencyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.title = "Convert Length"
+        binding.toolbar.title = "Frequency Convert"
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val areaUnits = arrayOf(
             "Cubic Meter", "Cubic Kilometer", "Cubic Centimeter", "Cubic Millimeter",
@@ -128,5 +132,10 @@ class FrequencyActivity : AppCompatActivity() {
 
     private fun String.showToast() {
         Toast.makeText(this@FrequencyActivity, this, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        super.onBackPressed()
+        return super.onOptionsItemSelected(item)
     }
 }
