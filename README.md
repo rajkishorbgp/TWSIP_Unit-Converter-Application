@@ -14,13 +14,13 @@ Welcome to the Unit Converter Application repository! This Android app allows yo
 
 ## Screenshots
 
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/1.png">
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/2.png">
+<img align="left" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/1.png">
+<img align="mid" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/2.png">
 <img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/3.png">
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/4.png">
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/5.png">
+<img align="left" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/4.png">
+<img align="mid" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/5.png">
 <img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/6.png">
-<img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/7.png">
+<img align="left" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/7.png">
 <img align="right" alt="Coding" width="200" src="https://github.com/rajkishorbgp/my-personal-data-/blob/main/AndroidProjects/UnitConverter/8.png">
 
 ## Installation
