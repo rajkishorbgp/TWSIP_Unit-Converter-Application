@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="eggplantColor">#000000</color>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="backgroundColor">#D1366B</color>
+    <color name="cardColor">#9D1141</color>
+    <color name="textColor">#ffff</color>
+    <color name="textBackground">#ffffff</color>
+    <color name="orchidColor">#8B0A36</color>
+
 </resources>

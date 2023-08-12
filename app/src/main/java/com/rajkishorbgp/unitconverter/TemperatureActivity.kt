@@ -1,7 +1,5 @@
 package com.rajkishorbgp.unitconverter
 
-//noinspection SuspiciousImport
-import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -14,6 +12,7 @@ import java.text.DecimalFormat
 @Suppress("DEPRECATION")
 class TemperatureActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTemperatureBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTemperatureBinding.inflate(layoutInflater)
@@ -23,25 +22,25 @@ class TemperatureActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val areaUnits = arrayOf(
+        val temperatureUnits = arrayOf(
             "Celsius", "Kelvin", "Fahrenheit"
         )
-        val arrayAdapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item, areaUnits)
+        val arrayAdapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, temperatureUnits)
         binding.spinnerFrom.adapter = arrayAdapter
         binding.spinnerTo.adapter = arrayAdapter
 
-        binding.convertButton.setOnClickListener { convertArea() }
+        binding.convertButton.setOnClickListener { convertTemperature() }
     }
 
-    private fun convertArea() {
-        val inputAreaText = binding.areaInput.text.toString()
-        if (inputAreaText.isBlank()) {
+    private fun convertTemperature() {
+        val inputTemperatureText = binding.temperatureInput.text.toString()
+        if (inputTemperatureText.isBlank()) {
             "Please enter a valid numeric value".showToast()
             return
         }
 
-        val inputArea = inputAreaText.toDoubleOrNull()
-        if (inputArea == null) {
+        val inputTemperature = inputTemperatureText.toDoubleOrNull()
+        if (inputTemperature == null) {
             "Please enter a valid numeric value".showToast()
             return
         }
@@ -49,41 +48,44 @@ class TemperatureActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputArea, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputTemperature, fromUnitPosition, toUnitPosition)
         displayResult(conversionResult)
     }
 
     private fun calculateConversion(value: Double, fromUnit: Int, toUnit: Int): Double {
-
-        var meter=0.0
-        when (fromUnit) {
-            0 -> { // Celsius
-                meter=value
-            }
-            1 -> { //Kelvin
-                meter=value*0.001
-            }
-            2 ->{//Fahrenheit
-
-            }
+        return when (fromUnit) {
+            0 -> calculateCelsiusToOther(value, toUnit) // Celsius
+            1 -> calculateKelvinToOther(value, toUnit) // Kelvin
+            2 -> calculateFahrenheitToOther(value, toUnit) // Fahrenheit
+            else -> 0.0
         }
-        return calculateResult(meter,toUnit)
     }
 
-    private fun calculateResult(meter: Double, toUnit: Int): Double {
-        when (toUnit) {
-            0 -> { // Celsius
-                return meter
-            }
-            1 -> { //Kelvin
-                return meter/0.001
-            }
-            2 -> { // Fahrenheit
-                return meter/100
-            }
+    private fun calculateCelsiusToOther(celsius: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> celsius // Celsius
+            1 -> celsius + 273.15 // Kelvin
+            2 -> (celsius * 9 / 5) + 32 // Fahrenheit
+            else -> 0.0
         }
-        "select the current option".showToast()
-        return 0.0
+    }
+
+    private fun calculateKelvinToOther(kelvin: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> kelvin - 273.15 // Celsius
+            1 -> kelvin // Kelvin
+            2 -> (kelvin - 273.15) * 9 / 5 + 32 // Fahrenheit
+            else -> 0.0
+        }
+    }
+
+    private fun calculateFahrenheitToOther(fahrenheit: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> (fahrenheit - 32) * 5 / 9 // Celsius
+            1 -> ((fahrenheit - 32) * 5 / 9) + 273.15 // Kelvin
+            2 -> fahrenheit // Fahrenheit
+            else -> 0.0
+        }
     }
 
     private fun displayResult(result: Double) {
@@ -97,7 +99,10 @@ class TemperatureActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        super.onBackPressed()
+        if (item.itemId == android.R.id.home) {
+            onBackPressed()
+            return true
+        }
         return super.onOptionsItemSelected(item)
     }
 }

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <color name="backgroundColor">#5B198F</color>
+    <color name="cardColor">#AF17A4</color>
+    <color name="textColor">#000000</color>
+    <color name="textBackground">#ffffff</color>
+    <color name="orchidColor">#E161DC</color>
+
     <!-- System -->
     <color name="infoBlueColor">#2f70e1</color>
     <color name="successColor">#53d76a</color>
@@ -86,7 +93,7 @@
     <color name="fuschiaColor">#ff1493</color>
     <color name="grapeColor">#360b58</color>
     <color name="periwinkleColor">#879fed</color>
-    <color name="orchidColor">#da70d6</color>
+<!--    <color name="orchidColor">#da70d6</color>-->
 
     <!-- Yellows -->
     <color name="goldenrodColor">#d7aa33</color>

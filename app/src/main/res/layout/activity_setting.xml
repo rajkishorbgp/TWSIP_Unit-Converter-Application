@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/backgroundColor"
     tools:context=".SettingActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -19,7 +20,7 @@
         android:id="@+id/changeLanguageCard"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:cardBackgroundColor="@color/infoBlueColor"
+        app:cardBackgroundColor="@color/cardColor"
         app:cardCornerRadius="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -46,7 +47,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:cardBackgroundColor="@color/infoBlueColor"
+            app:cardBackgroundColor="@color/cardColor"
             app:cardCornerRadius="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp">

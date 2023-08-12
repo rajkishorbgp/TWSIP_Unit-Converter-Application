@@ -1,7 +1,5 @@
 package com.rajkishorbgp.unitconverter
 
-//noinspection SuspiciousImport
-import android.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -14,6 +12,7 @@ import java.text.DecimalFormat
 @Suppress("DEPRECATION")
 class FrequencyActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFrequencyBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFrequencyBinding.inflate(layoutInflater)
@@ -23,27 +22,25 @@ class FrequencyActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val areaUnits = arrayOf(
-            "Cubic Meter", "Cubic Kilometer", "Cubic Centimeter", "Cubic Millimeter",
-            "Liter", "Milliliter", "US Gallon", "Us Quart","US Pint", "US Cup", "US Fluid Ounce"
-
+        val frequencyUnits = arrayOf(
+            "Hertz", "Kilohertz", "Megahertz", "Gigahertz", "Terahertz"
         )
-        val arrayAdapter = ArrayAdapter(this, R.layout.simple_spinner_dropdown_item, areaUnits)
+        val arrayAdapter = ArrayAdapter(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, frequencyUnits)
         binding.spinnerFrom.adapter = arrayAdapter
         binding.spinnerTo.adapter = arrayAdapter
 
-        binding.convertButton.setOnClickListener { convertArea() }
+        binding.convertButton.setOnClickListener { convertFrequency() }
     }
 
-    private fun convertArea() {
-        val inputAreaText = binding.areaInput.text.toString()
-        if (inputAreaText.isBlank()) {
+    private fun convertFrequency() {
+        val inputFrequencyText = binding.frequencyInput.text.toString()
+        if (inputFrequencyText.isBlank()) {
             "Please enter a valid numeric value".showToast()
             return
         }
 
-        val inputArea = inputAreaText.toDoubleOrNull()
-        if (inputArea == null) {
+        val inputFrequency = inputFrequencyText.toDoubleOrNull()
+        if (inputFrequency == null) {
             "Please enter a valid numeric value".showToast()
             return
         }
@@ -51,77 +48,87 @@ class FrequencyActivity : AppCompatActivity() {
         val fromUnitPosition = binding.spinnerFrom.selectedItemPosition
         val toUnitPosition = binding.spinnerTo.selectedItemPosition
 
-        val conversionResult = calculateConversion(inputArea, toUnitPosition, fromUnitPosition)
+        val conversionResult = calculateConversion(inputFrequency, toUnitPosition, fromUnitPosition)
         displayResult(conversionResult)
     }
 
     private fun calculateConversion(value: Double, fromUnit: Int, toUnit: Int): Double {
-
-        var meter=0.0
+        // Implement your conversion logic here for each unit type
         when (fromUnit) {
-            0 -> { // meter
-                meter=value
+            0 -> {
+                return calculateHertzToOther(value, toUnit)
             }
-            1 -> { //kilometer
-                meter=value*0.001
+            1 -> {
+                return calculateKilohertzToOther(value, toUnit)
             }
-            2 -> { // centimeter
-                meter=value*100
+            2 -> {
+                return calculateMegahertzToOther(value, toUnit)
             }
-            3 -> {//micrometer
-                meter=value*1000000
+            3 -> {
+                return calculateGigahertzToOther(value, toUnit)
             }
-            4 -> {//nanometer
-                meter=value*1000000000
+            4 -> {
+                return calculateTerahertzToOther(value, toUnit)
             }
-            5 -> {//mile
-                meter=value*0.0006213689
-            }
-            6 -> {//Yard
-                meter=value*1.0936132983
-            }
-            7 -> {//foot
-                meter=value*3.280839895
-            }
-            8 -> {// inch
-                meter=value*39.37007874
+            else -> {
+                return 0.0 // Default placeholder
             }
         }
-        return calculateResult(meter,toUnit)
     }
 
-    private fun calculateResult(meter: Double, toUnit: Int): Double {
-        when (toUnit) {
-            0 -> { // meter
-                return meter
-            }
-            1 -> { //kilometer
-                return meter/0.001
-            }
-            2 -> { // centimeter
-                return meter/100
-            }
-            3 -> {//micrometer
-                return meter/1000000
-            }
-            4 -> {//nanometer
-                return meter/1000000000
-            }
-            5 -> {//mile
-                return meter/0.0006213689
-            }
-            6 -> {//Yard
-                return meter/1.0936132983
-            }
-            7 -> {//foot
-                return meter/3.280839895
-            }
-            8 -> {// inch
-                return meter/39.37007874
-            }
+    private fun calculateHertzToOther(value: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> value // Hertz to Hertz
+            1 -> value * 0.001 // Hertz to Kilohertz
+            2 -> value * 1e-6 // Hertz to Megahertz
+            3 -> value * 1e-9 // Hertz to Gigahertz
+            4 -> value * 1e-12 // Hertz to Terahertz
+            else -> 0.0 // Default placeholder
         }
-        "select the current option".showToast()
-        return 0.0
+    }
+
+    private fun calculateKilohertzToOther(value: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> value * 1000 // Kilohertz to Hertz
+            1 -> value // Kilohertz to Kilohertz
+            2 -> value * 0.001 // Kilohertz to Megahertz
+            3 -> value * 1e-6 // Kilohertz to Gigahertz
+            4 -> value * 1e-9 // Kilohertz to Terahertz
+            else -> 0.0 // Default placeholder
+        }
+    }
+
+    private fun calculateMegahertzToOther(value: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> value * 1e6 // Megahertz to Hertz
+            1 -> value * 1000 // Megahertz to Kilohertz
+            2 -> value // Megahertz to Megahertz
+            3 -> value * 1e-3 // Megahertz to Gigahertz
+            4 -> value * 1e-6 // Megahertz to Terahertz
+            else -> 0.0 // Default placeholder
+        }
+    }
+
+    private fun calculateGigahertzToOther(value: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> value * 1e9 // Gigahertz to Hertz
+            1 -> value * 1e6 // Gigahertz to Kilohertz
+            2 -> value * 1000 // Gigahertz to Megahertz
+            3 -> value // Gigahertz to Gigahertz
+            4 -> value * 1e-3 // Gigahertz to Terahertz
+            else -> 0.0 // Default placeholder
+        }
+    }
+
+    private fun calculateTerahertzToOther(value: Double, toUnit: Int): Double {
+        return when (toUnit) {
+            0 -> value * 1e12 // Terahertz to Hertz
+            1 -> value * 1e9 // Terahertz to Kilohertz
+            2 -> value * 1e6 // Terahertz to Megahertz
+            3 -> value * 1000 // Terahertz to Gigahertz
+            4 -> value // Terahertz to Terahertz
+            else -> 0.0 // Default placeholder
+        }
     }
 
     private fun displayResult(result: Double) {
